@@ -15,3 +15,6 @@
     ```Bash
     docker build -t fasttext:dev
     ```
+    
+2. Run a container from the image `<image_name>:<tag_name>` built in step 1
+
