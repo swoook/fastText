@@ -12,7 +12,7 @@ def download(url, filepath):
         response = requests.get(url)             
         file.write(response.content)
         
-def parse_nmsc_txt_to_dataframe(url):
+def get_nmsc(url):
     result = requests.get(url)
     result = result.content.decode('utf-8')
     result = list(csv.reader(result.splitlines(), delimiter='\t'))
