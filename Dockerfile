@@ -22,4 +22,4 @@ RUN echo ". $FASTTEXT/bin/activate" >> ~/.bashrc
 
 RUN curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh | bash -s
 
-RUN $SANS/bin/pip install pybind11 python-mecab-ko scikit-learn
+RUN $SANS/bin/pip install pybind11 python-mecab-ko scikit-learn tqdm pandas pandarallel

@@ -18,3 +18,9 @@
     
 2. Run a container from the image `<image_name>:<tag_name>` built in step 1
 
+3. Download [pretrained fastText files](https://ratsgo.github.io/embedding/downloaddata.html)
+
+4. Open `<repository_directory>/examples/baseline/notebook.ipynb` and set `config` appropriately
+    - E.g., `config['pretrained_bin']`is a path of pretrained fastText `.bin` file
+
+5. Run the `notebook.ipynb` and See explanation
