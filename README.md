@@ -20,7 +20,7 @@
 
 3. Download [pretrained fastText files](https://ratsgo.github.io/embedding/downloaddata.html)
 
-4. Open `<repository_directory>/examples/baseline/notebook.ipynb` and set `config` appropriately
+4. Open [`./examples/baseline/notebook.ipynb`](./examples/baseline/notebook.ipynb) and set `config` appropriately
     - E.g., `config['pretrained_bin']`is a path of pretrained fastText `.bin` file
 
 5. Run the `notebook.ipynb` and See explanation
