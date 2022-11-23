@@ -17,7 +17,11 @@
 - fastText support `test`, which evaluate Precision@k, Recall@k (P@k, R@k)
 - $P@k$ is:
 
-$$ Y = \left \{ y_{1},\ y_{2},\ ...,\ y_{n} \right \} \text{where} \ y_{i} \ \text{is a i-th true label of a data point} \\ \hat{Y} = \left \{ \hat{y}_{1},\ \hat{y}_{2},\ ...,\ \hat{y}_{k} \right \} \text{where} \ y_{j} \ \text{is a j-th predicted label of a data point} \\ P@k = \frac{\# ( Y \cap \hat{Y} ) }{\# \hat{Y}} $$
+$$ Y = \left \{ y_{1},\ y_{2},\ ...,\ y_{n} \right \} \text{where} \ y_{i} \ \text{is a i-th true label of a data point} $$
+
+$$ \hat{Y} = \left \{ \hat{y}_{1},\ \hat{y}_{2},\ ...,\ \hat{y}_{k} \right \} \text{where} \ y_{j} \ \text{is a j-th predicted label of a data point} $$
+
+$$ P@k = \frac{\# ( Y \cap \hat{Y} ) }{\# \hat{Y}} $$
 
 - P@k and R@k are suitable for multi-label classification
 - So, we can use `test` without any consideration if we are dealing with multi-label classification
