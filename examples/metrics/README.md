@@ -14,7 +14,7 @@
 
 ## Multi-label classification
 
-- fastText support `test`, which evaluate Precision@k, Recall@k (P@k, R@k)
+- fastText support `test`, which evaluates Precision@k, Recall@k (P@k, R@k)
 - $P@k$ is:
 
 ![equation](./imgs/equation_1.svg)
@@ -27,8 +27,13 @@
 
 ## Single-label classification
 
+- It's easy to evaluate various metrics by using `sklearn`
+- E.g., `precision_recall_curve`, `fbeta_score`, `average_precision_score`, ... from `sklearn.metrics`
+- Refer to [3.3. Metrics and scoring: quantifying the quality of predictions](https://scikit-learn.org/stable/modules/model_evaluation.html) for more details
+
 ### Long-tail
 
-- It's more appropriate to use f-score or average precision rather than accuracy if the dataset is highly imbalanced
-- `sklearn` supports many features to evaluate the metrics
-- E.g., `precision_recall_curve`, `fbeta_score`, `average_precision_score`, ... from `sklearn.metrics`
+- It's more appropriate to evaluate f-score or Average Precision (AP) rather than accuracy if the dataset is highly imbalanced
+- See `get_precision_recall_curve` and `get_fbeta_score` showed in the `notebook.ipynb`
+- If we evaluate precision-recall curve and its f-scores, we need to find an optimal threshold and its precision, recall, and f-score
+- See `get_optimal_threshold` showed in the `notebook.ipynb`
