@@ -37,3 +37,8 @@
 - See `get_precision_recall_curve` and `get_fbeta_score` showed in the `notebook.ipynb`
 - If we evaluate precision-recall curve and its f-scores, we need to find an optimal threshold and its precision, recall, and f-score
 - See `get_optimal_threshold` showed in the `notebook.ipynb`
+
+### Multi-class classification
+
+- In the case of multi-class classification, evaluate the AP for each class then we can measure the mean AP (mAP)
+- Finding an optimal threshold is the same as before
