@@ -18,7 +18,7 @@
 ## Morpheme Analysis
 
 - fastText tokenizes based on spacing by default
-- But it's difficult to reflect the meaning if we tokenize Korean corpus based on spacing because Korean is belongs to an agglutinative language
+- But it's difficult to reflect the meaning if we tokenize Korean corpus based on spacing because Korean belongs to an agglutinative language
 - So it’s more appropriate to tokenize it based on morphemes if we’re dealing with Korean
 - E.g., AP(val) w/ MeCab is 0.92 and w/o is 0.87
 
