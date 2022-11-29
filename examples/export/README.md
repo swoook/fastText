@@ -11,12 +11,22 @@
 
 - We can reproduce the environments easily by using the `Dockerfile` in this directory
 
+## MeCab
+
+- Recall that it’s more appropriate to tokenize Korean corpus based on morphemes to reflect the meaning because Korean belongs to an agglutinative language
+- That's why we don't simply pass the document to the fastText model
+- Instead, we tokenize it based on morphemes and pass the tokens to the model
+
 ## Gensim
 
 - Gensim is a Python library for some NLP tasks including topic modelling, document indexing and similarity retrieval 
 - In this example, we export a fastText model to various frameworks via Gensim
 - E.g., fastText -> Gensim -> PyTorch
-- Recall that it’s more appropriate to tokenize Korean corpus based on morphemes to reflect the meaning because Korean belongs to an agglutinative language
-- That's why we don't simply pass the document to [`get_sentence_vector`](https://github.com/RaRe-Technologies/gensim/blob/ed8122ed3b704496178f79ec7e8c32c35eb9b3fa/gensim/models/fasttext.py#L1132)
-- Instead, we tokenize it based on morphemes and pass the tokens to `get_sentence_vector`
-- Be aware `get_sentence_vector` normalizes each word vector before taking a mean
+- Gensim supports `get_sentence_vector`, which is equivalent to `get_sentence_vector` in the fastText
+- Be aware `get_sentence_vector` normalizes each word vector before taking a mean by default
+
+## PyTorch
+
+- Recall that
+> - Be aware `get_sentence_vector` normalizes each word vector before taking a mean by default
+- So we need to normalize `embeddings` before taking the mean to reproduce a result
