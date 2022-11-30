@@ -20,8 +20,6 @@
 ## Gensim
 
 - Gensim is a Python library for some NLP tasks including topic modelling, document indexing and similarity retrieval 
-- In this example, we export a fastText model to various frameworks via Gensim
-- E.g., fastText -> Gensim -> PyTorch
 - Gensim supports `get_sentence_vector`, which is equivalent to `get_sentence_vector` in the fastText
 - Be aware `get_sentence_vector` normalizes each word vector before taking a mean by default
 
@@ -30,3 +28,7 @@
 - Recall that
 > - Be aware `get_sentence_vector` normalizes each word vector before taking a mean by default
 - So we need to normalize `embeddings` before taking the mean to reproduce a result
+- [ ] Implement a character N-gram
+    - `torchtext`
+    - https://github.com/facebookresearch/fastText/issues/1062#issuecomment-627830841
+    - https://github.com/pytorch/text/issues/539#issuecomment-497560002
