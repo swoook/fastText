@@ -29,3 +29,17 @@
 3. https://github.com/shineware/KOMORAN
 4. [MeCab: Yet Another Part-of-Speech and Morphological Analyzer (taku910.github.io)](http://taku910.github.io/mecab/)
 5. https://github.com/open-korean-text/open-korean-text
+
+## Ambiguity
+
+- Proper nouns are one of the parts of speech where a lot of new words appears
+- One of the main motivations for adjusting the priority is to disambiguate new vocabulary
+- E.g., 걔는 비를 좋아한다 (She likes 비) → 비? 🧑‍🎤? 아니면 🌧️?
+- If it’s difficult to estimate the appropriate cost, default dictionary in mecab-ko-dic might be helpful
+- There are lots of homonyms in the default dictionary and it relieves the ambiguity by assigning a high cost to vobaculary to less used ones
+- One-letter vocabulary in `Person.csv` and `Person-actor.csv` provided by mecab-ko-dic have much higher proportion of homonyms than the vocabulary that doesn’t
+- And a trend of its cost also significantly different:
+
+Figure 1. A bar chart showing the frequency of cost of a one-letter vocabulary in Person.csv and Person-actor.csv             | Figure 2. A bar chart showing the frequency of cost of two or more letter vocabulary in Person.csv and Person-actor.csv
+:-------------------------:|:-------------------------:
+![Figure 1. A bar chart showing the frequency of cost of a one-letter vocabulary in Person.csv and Person-actor.csv](./imgs/figure_01.png)  |  ![Figure 2. A bar chart showing the frequency of cost of two or more letter vocabulary in Person.csv and Person-actor.csv](./imgs/figure_02.png)
