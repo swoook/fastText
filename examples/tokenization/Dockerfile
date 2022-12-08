@@ -23,7 +23,7 @@ RUN rm $MECAB_KO_DIC_DIR/Person-actor.csv
 COPY app /app
 WORKDIR /app
 RUN rm $MECAB_KO_DIC_DIR/user-dic/*
-RUN cp dictionaries/MeCab_user_Celeb.csv $MECAB_KO_DIC_DIR/user-dic/
+RUN cp dictionaries/Person.csv $MECAB_KO_DIC_DIR/user-dic/
 
 WORKDIR $MECAB_KO_DIC_DIR
 RUN tools/add-userdic.sh

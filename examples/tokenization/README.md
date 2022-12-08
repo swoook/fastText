@@ -43,3 +43,15 @@
 Figure 1. A bar chart showing the frequency of cost of a one-letter vocabulary in Person.csv and Person-actor.csv             | Figure 2. A bar chart showing the frequency of cost of two or more letter vocabulary in Person.csv and Person-actor.csv
 :-------------------------:|:-------------------------:
 ![Figure 1. A bar chart showing the frequency of cost of a one-letter vocabulary in Person.csv and Person-actor.csv](./imgs/figure_01.png)  |  ![Figure 2. A bar chart showing the frequency of cost of two or more letter vocabulary in Person.csv and Person-actor.csv](./imgs/figure_02.png)
+
+### E.g., Adjusting costs to disambiguate korean name
+
+1. Make sure the name we want to add already exists in `Person.csv` and `Person-actor.csv`
+    - Exist if it already exists
+    - If not, proceed
+2. Make sure ther are homonyms in other `.csv` files
+3. Determine the cost according to the presence of homonyms as follows:
+    - If there’s no homonym, expectation of th costs in `Person.csv` and `Person-actor.csv`
+    - If any homonym exists, assign a higher value than the existing vocabulary, and adjust it according to the result
+    
+## Wordpiece (TODO)
