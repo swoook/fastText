@@ -15,7 +15,12 @@
 | Ubuntu | 18.04 LTS |
 | Docker | 20.10.14 |
 
-## Motivation: Why I choose fastText for Korean NLP tasks
+## Usecase: Why I use fastText for Korean NLP tasks
+
+1. fastText is robust to morphologically rich language
+2. Computational resources are extremely limited
+
+### 1. fastText is robust to morphologically rich language
 
 - Korean belongs to an agglutinative language
 - E.g., 나는, 나를, 나의, 나로, 나에게, 나한테, 나처럼, 나와, 나랑, ...

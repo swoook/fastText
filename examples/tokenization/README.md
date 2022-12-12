@@ -30,6 +30,14 @@
 4. [MeCab: Yet Another Part-of-Speech and Morphological Analyzer (taku910.github.io)](http://taku910.github.io/mecab/)
 5. https://github.com/open-korean-text/open-korean-text
 
+## Jamo
+
+- In Korean NLP tasks, we can see many methodologies which tokenize Korean by hangul jamo
+- Because many people usually don't strictly follow grammar or spelling, but also intentionally add typos in the wilds
+- E.g., toxic comments which include transformation by jamo to evade censorship (씨발 → ㅆㅣㅂㅏㄹ)
+- So it may be appropriate to tokenize it based on jamo if we're dealing with Korean corpus from the internet
+- Be cautious it may require additional computational cost to tokenize a corpus into jamo
+
 ## Ambiguity
 
 - Proper nouns are one of the parts of speech where a lot of new words appears
@@ -53,5 +61,3 @@ Figure 1. A bar chart showing the frequency of cost of a one-letter vocabulary i
 3. Determine the cost according to the presence of homonyms as follows:
     - If there’s no homonym, expectation of th costs in `Person.csv` and `Person-actor.csv`
     - If any homonym exists, assign a higher value than the existing vocabulary, and adjust it according to the result
-    
-## Wordpiece (TODO)
